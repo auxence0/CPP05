@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/31 14:35:53 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/31 15:32:54 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/01 12:06:37 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,27 @@
 
 
 int	main() {
-	try
-	{
-		Bureaucrat	rat(-3);
+	try {
+		Bureaucrat	rat("auxence", -3);
 	}
-	catch (std::exception& e)
-	{
+	catch (std::exception& e) {
+		std::cerr << e.what();
+	}
+
+	try {
+		Bureaucrat	souris("hors range", 151);
+	}
+	catch (std::exception& e) {
+		std::cerr << e.what();
+	}
+
+	try {
+		Bureaucrat	macaron("Meilleur", 1);
+		macaron.decrement();
+		macaron.increment();
+		macaron.increment();
+	}
+	catch (std::exception& e) {
 		std::cerr << e.what();
 	}
 }

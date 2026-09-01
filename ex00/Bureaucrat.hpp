@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/31 13:53:02 by asauvage          #+#    #+#             */
-/*   Updated: 2026/08/31 16:21:53 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/01 11:53:45 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <string>
 # include <iostream>
+# include <exception>
 
 class	Bureaucrat {
 	private:
