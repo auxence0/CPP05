@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/31 14:12:58 by asauvage          #+#    #+#             */
-/*   Updated: 2026/09/01 12:10:24 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/01 16:41:41 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ Bureaucrat::~Bureaucrat() {
 	return ;
 }
 
-std::string	Bureaucrat::getName() {
+std::string	Bureaucrat::getName() const {
 	return name_;
 }
 
-int	Bureaucrat::getGrade() {
+int	Bureaucrat::getGrade() const {
 	return grade_;
 }
 
@@ -58,4 +58,7 @@ void	Bureaucrat::increment() {
 		throw	Bureaucrat::GradeTooHighException();
 }
 
-std::ostream&	operator<<(std::ostream& out, const Bureaucrat);
+std::ostream&	operator<<(std::ostream& out, const Bureaucrat& rhs) {
+	out << rhs.getName() << " is " << rhs.getGrade() << "\n";
+	return out;
+}

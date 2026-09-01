@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/31 13:53:02 by asauvage          #+#    #+#             */
-/*   Updated: 2026/09/01 11:53:45 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/01 16:40:49 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ class	Bureaucrat {
 		Bureaucrat( const Bureaucrat& obj);
 		~Bureaucrat();
 		Bureaucrat& operator=( const Bureaucrat& rhs );
-		std::string	getName();
-		int			getGrade();
+		std::string	getName() const ;
+		int			getGrade() const ;
 		void		increment();
 		void		decrement();
 

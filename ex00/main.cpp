@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/31 14:35:53 by asauvage          #+#    #+#             */
-/*   Updated: 2026/09/01 12:13:37 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/01 16:41:26 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main() {
 
 	try {
 		Bureaucrat	macaron("Meilleur", 1);
-		std::cout << macaron.getName() << " is " << macaron.getGrade() << "\n";
+		std::cout << macaron;
 		macaron.decrement();
 		macaron.increment();
 		macaron.increment();
