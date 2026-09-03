@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/31 14:12:58 by asauvage          #+#    #+#             */
-/*   Updated: 2026/09/01 17:26:05 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/03 13:00:01 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,9 +62,14 @@ void	Bureaucrat::increment() {
 void	Bureaucrat::signForm( Form& form ) {
 	try {
 		form.beSigned(*this);
+		std::cout << name_ << " signed " << form.getName() << "\n";
 	}
-};
+	catch (std::exception& e) {
+		std::cerr << name_ << " couln't sign " << form.getName() << " because " << e.what();
+	}
+}
 
 std::ostream&	operator<<(std::ostream& out, const Bureaucrat& rhs) {
 	out << rhs.getName() << "is" << rhs.getGrade() << "\n";
+	return out;
 }
