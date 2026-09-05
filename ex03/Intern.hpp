@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/04 13:14:34 by asauvage          #+#    #+#             */
-/*   Updated: 2026/09/04 16:45:37 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/05 17:30:42 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class	Intern {
 		Intern( const Intern& obj );
 		Intern&	operator=( const Intern& rhs );
 		~Intern();
-		AForm*	makeForm( std::string name, std::string target );
+		AForm*	makeForm( const std::string& name, const std::string& target );
 
 	class	InternBadStr: public std::exception {
 		public:

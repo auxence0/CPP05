@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 16:35:21 by asauvage          #+#    #+#             */
-/*   Updated: 2026/09/01 17:21:08 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/05 16:57:51 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Form::Form(): name_("Default"), grade_sign_(1), grade_execute_(1), signed_(0) {
 	return ;
 }
 
-Form::Form( std::string name, int grade_sign, int grade_execute): name_(name), grade_sign_(grade_sign), grade_execute_(grade_execute), signed_(0) {
+Form::Form( const std::string& name, int grade_sign, int grade_execute): name_(name), grade_sign_(grade_sign), grade_execute_(grade_execute), signed_(0) {
 	if (grade_sign_ < 1 || grade_execute_ < 1)
 		throw	Form::GradeTooHighException();
 	if (grade_sign_ > 150 || grade_execute_ > 150)
@@ -25,8 +25,7 @@ Form::Form( std::string name, int grade_sign, int grade_execute): name_(name), g
 	return ;
 }
 
-Form::Form( const Form& obj ):name_("Default cpy"), grade_sign_(1), grade_execute_(1) {
-	signed_ = obj.signed_;
+Form::Form( const Form& obj ):name_(obj.name_), grade_sign_(1), grade_execute_(1), signed_(obj.signed_) {
 	return ;
 }
 

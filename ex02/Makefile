@@ -6,7 +6,7 @@
 #    By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/22 11:52:07 by asauvage          #+#    #+#              #
-#    Updated: 2026/09/03 17:40:22 by asauvage         ###   ########.fr        #
+#    Updated: 2026/09/05 17:37:18 by asauvage         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRCS = main.cpp \
 	   Bureaucrat.cpp \
 	   AForm.cpp \
 	   PresidentialPardonForm.cpp \
-	   RobotmyRequestForm.cpp \
+	   RobotomyRequestForm.cpp \
 	   ShrubberyCreationForm.cpp
 
 

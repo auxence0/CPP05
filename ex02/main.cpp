@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 17:03:18 by asauvage          #+#    #+#             */
-/*   Updated: 2026/09/03 18:19:08 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/05 17:29:26 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 int	main() {
 	std::srand(std::time(NULL));
 	PresidentialPardonForm	Presidential("Presidential");
-	RobotmyRequestForm		Robot("Robot");
+	RobotomyRequestForm		Robot("Robot");
 	ShrubberyCreationForm	Shrubbery("Shrubbery");
 	Bureaucrat				auxence("auxence", 12);
 	Bureaucrat				le_meilleur("Bob", 1);

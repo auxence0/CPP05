@@ -6,22 +6,22 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 14:03:08 by asauvage          #+#    #+#             */
-/*   Updated: 2026/09/03 16:58:17 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/05 17:45:17 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm(): AForm("Default PresiendialPardonForm", 25, 5) {
-	target_ = "Default PresidentialPardonForm";
+PresidentialPardonForm::PresidentialPardonForm(): AForm("Default PresiendialPardonForm", 25, 5), target_("Default PresidentialPardonForm") {
+	return ;
 }
 
-PresidentialPardonForm::PresidentialPardonForm( const std::string& target ): AForm(target, 25, 5) {
-	target_ = target;
+PresidentialPardonForm::PresidentialPardonForm( const std::string& target ): AForm(target, 25, 5), target_(target) {
+	return ;
 }
 
-PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm& obj ): AForm(obj) {
-	*this = obj;
+PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm& obj ): AForm(obj), target_(obj.target_) {
+	return ;
 }
 
 PresidentialPardonForm&	PresidentialPardonForm::operator=( const PresidentialPardonForm& rhs ) {
@@ -32,6 +32,7 @@ PresidentialPardonForm&	PresidentialPardonForm::operator=( const PresidentialPar
 }
 
 PresidentialPardonForm::~PresidentialPardonForm() {
+	return ;
 }
 
 void	PresidentialPardonForm::execute( Bureaucrat const & executor ) const {

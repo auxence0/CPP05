@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/04 16:17:02 by asauvage          #+#    #+#             */
-/*   Updated: 2026/09/04 16:53:41 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/05 17:35:41 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Intern::~Intern() {
 	return ;
 }
 
-AForm*	Intern::makeForm( std::string name, std::string target ) {
+AForm*	Intern::makeForm( const std::string& name, const std::string& target ) {
 	std::string	str[] = {
 		"robotomy request",
 		"presidential pardon",
@@ -44,18 +44,18 @@ AForm*	Intern::makeForm( std::string name, std::string target ) {
 	int i = 0;
 	while (i < 3 && str[i] != name)
 		i++;
-	
+
 	switch (i)
 	{
 	case 0:
-		return new RobotmyRequestForm(target);
-		break;
+		std::cout << "Intern creates " << name << "\n";
+		return new RobotomyRequestForm(target);
 	case 1:
+		std::cout << "Intern creates " << name << "\n";
 		return new	PresidentialPardonForm(target);
-		break;
 	case 2:
+		std::cout << "Intern creates " << name << "\n";
 		return new	ShrubberyCreationForm(target);
-		break;
 	default:
 		throw	Intern::InternBadStr();
 	}

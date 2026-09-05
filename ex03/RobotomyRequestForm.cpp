@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotmyRequestForm.cpp                             :+:      :+:    :+:   */
+/*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 14:22:35 by asauvage          #+#    #+#             */
-/*   Updated: 2026/09/03 17:57:27 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/05 17:46:30 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
-RobotmyRequestForm::RobotmyRequestForm(): AForm("Default RobotmyRequestForm", 72, 45) {
-	target_ = "Default RobotmyRequestForm";
+RobotomyRequestForm::RobotomyRequestForm(): AForm("Default RobotomyRequestForm", 72, 45), target_("Default RobotomyRequestForm") {
+	return ;
 }
 
-RobotmyRequestForm::RobotmyRequestForm( const std::string& target ): AForm(target, 72, 45) {
-	target_ = target;
+RobotomyRequestForm::RobotomyRequestForm( const std::string& target ): AForm(target, 72, 45), target_(target) {
+	return ;
 }
 
-RobotmyRequestForm::RobotmyRequestForm( const RobotmyRequestForm& obj ): AForm(obj) {
-	*this = obj;
+RobotomyRequestForm::RobotomyRequestForm( const RobotomyRequestForm& obj ): AForm(obj), target_(obj.target_) {
+	return ;
 }
 
-RobotmyRequestForm&	RobotmyRequestForm::operator=( const RobotmyRequestForm& rhs ) {
+RobotomyRequestForm&	RobotomyRequestForm::operator=( const RobotomyRequestForm& rhs ) {
 	if (this != &rhs) {
 		target_ = rhs.target_;
 	}
 	return *this;
 }
 
-RobotmyRequestForm::~RobotmyRequestForm() {
+RobotomyRequestForm::~RobotomyRequestForm() {
+	return ;
 }
 
-void	RobotmyRequestForm::execute( Bureaucrat const & executor ) const {
+void	RobotomyRequestForm::execute( Bureaucrat const & executor ) const {
 	execution(executor);
 	std::cout << "* VRRRRR BZZZZZZZ VRRRRRRR *\n";
 	int x = rand();

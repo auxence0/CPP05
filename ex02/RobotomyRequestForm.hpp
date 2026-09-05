@@ -6,24 +6,24 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 13:34:22 by asauvage          #+#    #+#             */
-/*   Updated: 2026/09/03 17:56:50 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/05 17:28:09 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ROBOTMYREQUESTFORM_HPP
-# define ROBOTMYREQUESTFORM_HPP
+#ifndef ROBOTOMYREQUESTFORM_HPP
+# define ROBOTOMYREQUESTFORM_HPP
 
 # include "AForm.hpp"
 # include <cstdlib>
 # include <ctime>
 
-class	RobotmyRequestForm: public AForm {
+class	RobotomyRequestForm: public AForm {
 	public:
-		RobotmyRequestForm();
-		RobotmyRequestForm( const std::string& target );
-		RobotmyRequestForm( const RobotmyRequestForm& obj );
-		RobotmyRequestForm&	operator=( const RobotmyRequestForm& rhs );
-		~RobotmyRequestForm();
+		RobotomyRequestForm();
+		RobotomyRequestForm( const std::string& target );
+		RobotomyRequestForm( const RobotomyRequestForm& obj );
+		RobotomyRequestForm&	operator=( const RobotomyRequestForm& rhs );
+		~RobotomyRequestForm();
 		virtual void			execute( Bureaucrat const & executor ) const;
 	private:
 		std::string	target_;
